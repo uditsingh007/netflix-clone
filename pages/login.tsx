@@ -25,7 +25,7 @@ const login = () => {
     }
   }
   return (
-    <div className="relative flex h-screen w-screen flex-col md:items-center md:justify-center md:bg-transparent">
+    <div className="relative flex h-screen w-screen flex-col bg-black md:items-center md:justify-center md:bg-transparent">
       <Head>
         <title>Netflix</title>
         <link rel="icon" href="/favicon.ico" />
@@ -44,7 +44,7 @@ const login = () => {
       />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="relative space-y-8 rounded bg-black/75 py-10 px-6 md:max-w-md md:px-14"
+        className="relative mt-24 space-y-8 rounded bg-black/75 py-10 px-6 md:max-w-md md:px-14"
       >
         <h1 className="text-4xl font-semibold">Sign In</h1>
 
