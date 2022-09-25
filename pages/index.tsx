@@ -35,14 +35,13 @@ const Home = ({
   trendingNow,
   products,
 }: Props) => {
-  console.log(products)
   const { loading } = useAuth()
   const showModal = useRecoilValue(modalState)
   const subsciption = false
 
-  if (loading || subsciption === null) return null
+  // if (loading || subsciption === null) return null
 
-  if (!subsciption) return <Plans />
+  // if (!subsciption) return <Plans products={products} />
 
   return (
     <div
@@ -102,7 +101,7 @@ export const getServerSideProps = async () => {
   ])
   return {
     props: {
-      netflixOriginals: netflixOriginals.results,
+      netflixOriginals: netflixOriginals?.results,
       trendingNow: trendingNow.results,
       topRated: topRated.results,
       actionMovies: actionMovies.results,
